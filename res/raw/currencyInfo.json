@@ -1,0 +1,63 @@
+{
+"CurrencyInfo":[
+{
+	"country":"Argentina",
+	"currency":"peso argentino",
+	"denomination":"100",
+	"description":"peso_ar_100_description"
+},
+{
+	"country":"Argentina",
+	"currency":"peso argentino",
+	"denomination":"50",
+	"description":"peso_ar_50_description"
+},
+{
+	"country":"Brasil",
+	"currency":"real",
+	"denomination":"100",
+	"description":"real_100_description"
+},
+
+{
+	"country":"Brasil",
+	"currency":"real",
+	"denomination":"50",
+	"description":"real_100_description"
+},
+{
+	"country":"EEUU",
+	"currency":"usd",
+	"denomination":"100",
+	"description":"usd_100_description"
+},
+{
+	"country":"EEUU",
+	"currency":"usd",
+	"denomination":"50",
+	"description":"usd_100_description"
+},
+{
+	"country":"EUROPE",
+	"currency":"euro",
+	"denomination":"500",
+	"description":"euro_500_description"
+},
+{
+	"country":"Europe",
+	"currency":"euro",
+	"denomination":"100",
+	"description":"euro_100_description"
+},
+{
+	"country":"Colombia",
+	"currency":"peso colombiano",
+	"denomination":"100000",
+	"description":"peso_col_100k_description"
+},
+{
+	"country":"Colombia",
+	"currency":"peso colombiano",
+	"denomination":"50000",
+	"description":"peso_col_50k_description"
+}]

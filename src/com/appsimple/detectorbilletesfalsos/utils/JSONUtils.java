@@ -3,72 +3,70 @@ package com.appsimple.detectorbilletesfalsos.utils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.appsimple.detectorbilletesfalsos.beans.CurrencyInfo;
 
 import android.content.Context;
 import android.util.Log;
 
+import com.appsimple.detectorbilletesfalsos.beans.CurrencyInfo;
+
 public class JSONUtils {
-	
+
 	private JSONUtils instance;
-	
-	private JSONUtils(){}
-	
-	public JSONUtils getInstance(){
-		if (instance != null){
+
+	private JSONUtils() {
+	}
+
+	public JSONUtils getInstance() {
+		if (instance != null) {
 			instance = new JSONUtils();
 		}
 		return instance;
 	}
-	
+
 	private String loadJSONFromAsset(Context ctx, String jsonFile) {
-	    String json = null;
-	    try {
-	        InputStream is = ctx.getAssets().open(jsonFile);
-	        int size = is.available();
-	        byte[] buffer = new byte[size];
-	        is.read(buffer);
-	        is.close();
-	        json = new String(buffer, "UTF-8");
-	    } catch (IOException ex) {
-	        ex.printStackTrace();
-	        return null;
-	    }
-	    return json;
+		String json = null;
+		try {
+			InputStream is = ctx.getAssets().open(jsonFile);
+			int size = is.available();
+			byte[] buffer = new byte[size];
+			is.read(buffer);
+			is.close();
+			json = new String(buffer, "UTF-8");
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			return null;
+		}
+		return json;
 	}
-	public CurrencyInfo parseJson(Context ctx, String jsonFile){
-		
-	    JSONObject obj;
+
+	public List<CurrencyInfo> parseJson(Context ctx, String jsonFile) {
+
+		JSONObject obj;
+		List<CurrencyInfo> currencyList = new ArrayList<CurrencyInfo>();
 		try {
 			obj = new JSONObject(loadJSONFromAsset(ctx, jsonFile));
-		
-	        JSONArray m_jArry = obj.getJSONArray("formules");
-	        ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
-	        HashMap<String, String> m_li;
-	
-	        for (int i = 0; i < m_jArry.length(); i++) {
-	            JSONObject jo_inside = m_jArry.getJSONObject(i);
-	            Log.d("Details-->", jo_inside.getString("formule"));
-	            String formula_value = jo_inside.getString("formule");
-	            String url_value = jo_inside.getString("url");
-	            m_li = new HashMap<String, String>();
-	            m_li.put("formule", formula_value);
-	            m_li.put("url", url_value);
-	
-	            formList.add(m_li);
-	        }
+
+			JSONArray m_jArry = obj.getJSONArray(jsonFile);
+
+			for (int i = 0; i < m_jArry.length(); i++) {
+				JSONObject jo_inside = m_jArry.getJSONObject(i);
+				CurrencyInfo item = new CurrencyInfo();
+				item.setCountry(jo_inside.getString("country"));
+				item.setCurrency(jo_inside.getString("currency"));
+				item.setDenomination(jo_inside.getString("denomination"));
+				item.setDescription(jo_inside.getString("description"));
+
+				currencyList.add(item);
+			}
+		} catch (Exception e) {
+			Log.d("JSONUTILS",
+					"Error while trying to parse JSON: " + e.getMessage());
 		}
-		catch (Exception e){
-			Log.d("JSONUTILS","Error while trying to parse JSON: " + e.getMessage());
-		}
+		return currencyList;
 	}
-	
-	    
-	    
+
 }
