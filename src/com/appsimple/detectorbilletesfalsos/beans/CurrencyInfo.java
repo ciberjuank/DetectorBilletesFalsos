@@ -4,6 +4,7 @@ public class CurrencyInfo {
 	private String country;
 	private String currency;
 	private String denomination;
+	private String watermark;
 	private String description;
 	
 	public String getCountry() {
@@ -29,6 +30,12 @@ public class CurrencyInfo {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getWatermark() {
+		return watermark;
+	}
+	public void setWatermark(String watermark) {
+		this.watermark = watermark;
 	}
 	
 	

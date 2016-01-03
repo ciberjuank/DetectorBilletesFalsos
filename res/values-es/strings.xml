@@ -1,19 +1,16 @@
 <resources>
 
-    
     <string name="app_name">Detector de Billetes Falsos</string>
-          <string name="btnyes">Si !</string>
-            <string name="btnno">No, disculpa </string>
+    <string name="btnyes">Si !</string>
+    <string name="btnno">No, disculpa </string>
     <string name="btngopro">Remover Publicidades</string>
-            
-            <string name="boxrate">Apreciariamos mucho si nos calificaras en la play store, solo te tomará un minuto. </string>
-                  <string name="txtpropaganda">Hola soy Rodrigo, el desarrollador de esta app. Recién terminé de programar un nuevo juego. ¿Te gustaría probarlo? Es completamente gratuito!</string>
-                <string name="propagandatitulo">Mi nuevo Juego</string>
-                                <string name="propagandayes">Si por supuesto !</string>
-                                <string name="propagandano">No, gracias.</string>
+    <string name="boxrate">Apreciariamos mucho si nos calificaras en la play store, solo te tomará un minuto. </string>
+    <string name="txtpropaganda">Hola soy Rodrigo, el desarrollador de esta app. Recién terminé de programar un nuevo juego. ¿Te gustaría probarlo? Es completamente gratuito!</string>
+    <string name="propagandatitulo">Mi nuevo Juego</string>
+    <string name="propagandayes">Si por supuesto !</string>
+    <string name="propagandano">No, gracias.</string>
     <string name="btnstart">Iniciar UV</string>
-            <string name="btninfo">Más info sobre los billetes</string>
-    
+    <string name="btninfo">Más info sobre los billetes</string>
     <string name="btnstart2">Comprobar Marcas de Agua</string>
     <string name="btnhelp">Ayuda</string>
     <string name="btnabout">Créditos</string>
@@ -25,12 +22,12 @@
     <string name="boxstarttitle">Atención!</string>
     <string name="boxabouttitle">Créditos</string>
     <string name="boxabout">Detector de billetes Falsos fue diseñado por Rodrigo Gonzalez Fantino. ¿Te gustó esta aplicación?</string>
-    
-
-       <string name="btnnext">Next</string>
-        <string name="btnprevious">Previous</string>
-            <string name="btnpa">Pesos Argentinos</string>
-            
-                <string name="txta">Anverso</string>
-                <string name="txtr">Reverso</string>
+    <string name="btnnext">Next</string>
+    <string name="btnprevious">Previous</string>
+    <string name="btnpa">Pesos Argentinos</string>
+    <string name="txta">Anverso</string>
+    <string name="txtr">Reverso</string>
+	<string name="real_50_watermark">Coloque contra la luz y verifique en el área clara la figura de un animal y el número de valor del billete en tonos que varian de claro ao oscuro</string>
+	<string name="real_50_description">Los billetes de 50 y 100 reais tienen una marca holográfica que al moverse puede ver los siguientes efectos: A) El número de valor del billete y la palabra REAIS se alternan B) La figura del animal se vuelve colorida. C) La hoja (en los billetes de 50) y en el coral (billete de 100) aparecen diversos colores en movimiento</string>
+	
 </resources>
