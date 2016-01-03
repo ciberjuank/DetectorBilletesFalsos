@@ -1,0 +1,36 @@
+<resources>
+
+    
+    <string name="app_name">Detector de Billetes Falsos</string>
+          <string name="btnyes">Si !</string>
+            <string name="btnno">No, disculpa </string>
+    <string name="btngopro">Remover Publicidades</string>
+            
+            <string name="boxrate">Apreciariamos mucho si nos calificaras en la play store, solo te tomará un minuto. </string>
+                  <string name="txtpropaganda">Hola soy Rodrigo, el desarrollador de esta app. Recién terminé de programar un nuevo juego. ¿Te gustaría probarlo? Es completamente gratuito!</string>
+                <string name="propagandatitulo">Mi nuevo Juego</string>
+                                <string name="propagandayes">Si por supuesto !</string>
+                                <string name="propagandano">No, gracias.</string>
+    <string name="btnstart">Iniciar UV</string>
+            <string name="btninfo">Más info sobre los billetes</string>
+    
+    <string name="btnstart2">Comprobar Marcas de Agua</string>
+    <string name="btnhelp">Ayuda</string>
+    <string name="btnabout">Créditos</string>
+    <string name="btnexit">Salir</string>
+    <string name="boxhelp">Pon un billete sobre la pantalla en un lugar lo suficientemente oscuro y podras ver los pelitos verdes que indican autenticidad del billete. En el caso de querer comprobar marcas de agua también apoya el billete en la pantalla y veras como resaltan las marcas de agua.</string>
+    <string name="btnboxrate">Califícanos</string>
+    <string name="btnboxclose">Cerrar</string>
+    <string name="boxhelptitle">Ayuda</string>
+    <string name="boxstarttitle">Atención!</string>
+    <string name="boxabouttitle">Créditos</string>
+    <string name="boxabout">Detector de billetes Falsos fue diseñado por Rodrigo Gonzalez Fantino. ¿Te gustó esta aplicación?</string>
+    
+
+       <string name="btnnext">Next</string>
+        <string name="btnprevious">Previous</string>
+            <string name="btnpa">Pesos Argentinos</string>
+            
+                <string name="txta">Anverso</string>
+                <string name="txtr">Reverso</string>
+</resources>

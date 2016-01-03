@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">Counterfeit Money Detector</string>
+      <string name="btngopro">Remove Ads</string>
+    
+    <string name="btnstart">Start UV</string>
+    <string name="btnstart2">Check Watermark</string>
+    <string name="btnhelp">How to use</string>
+    <string name="btnabout">About</string>
+    <string name="btnexit">Exit</string>
+        <string name="btnyes">Yes !</string>
+            <string name="btnno">Sorry but no </string>
+            <string name="boxrate">We would greatly appreciate it if you could Rate Us on the play store</string>
+            
+                  <string name="txtpropaganda">Hi there, I´m Rodrigo the developer of this app. i just finished developing a new game would you like to try it ? It´s free !</string>
+                <string name="propagandatitulo">My new Game!</string>
+                                <string name="propagandayes">Yeah sure !</string>
+                                <string name="propagandano">No, thanks.</string>
+    <string name="boxhelp">Put a bill on the screen and you will se the watermarks and in the case of the uv light some colored marks. Make shure to be in a dark place if using the uv light</string>
+    <string name="btnboxrate">Rate Us</string>
+            <string name="btninfo">More info about counterfeit</string>
+    
+    <string name="btnboxclose">Close</string>
+    <string name="boxhelptitle">Help</string>
+    <string name="boxstarttitle">Attention!</string>
+    <string name="boxabouttitle">About</string>
+    <string name="boxabout">Conterfeit Money Detecotr was designed by Rodrigo Gonzalez Fantino. Did you like this app?</string>
+           <string name="btnnext">Next</string>
+        <string name="btnprevious">Previous</string>
+            <string name="btnpa">Pesos Argentinos</string>
+            
+                <string name="txta">Anverso</string>
+                <string name="txtr">Reverso</string>
+	
+</resources>
