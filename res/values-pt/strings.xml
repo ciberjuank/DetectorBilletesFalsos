@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Detector de Notas Falsos</string>
-    <string name="btnyes">Sim !</string>
-    <string name="btnno">Nao, desculpas </string>
-    <string name="btngopro">Retirar Publicidades</string>
-    <string name="boxrate">Porfavor, podería qualificar-nos na play store? Só é questao de um minuto. </string>
-    <string name="txtpropaganda">Sou Rodrigo, o desenvolvedor de esta app. Recentemente terminé de publicar um novo jogo. ¿Gostaría testa-lo? É de graca</string>
-    <string name="propagandatitulo">Meu novo jogo</string>
-    <string name="propagandayes">Sim !</string>
-    <string name="propagandano">Nao, obrigado.</string>
-    <string name="btnstart">Iniciar UV</string>
-    <string name="btninfo">Mais info sobre as notas</string>
-    <string name="btnstart2">Comprobar Marca d'agua</string>
+    <string name="btnstart2">Comprobar Marca d\'agua</string>
     <string name="btnhelp">Ajuda</string>
     <string name="btnabout">Créditos</string>
     <string name="btnexit">Sair</string>
-    <string name="boxhelp">Poe a nota sobre a tela. Tem que estar escuro y podras ver as filgranas que verificar que a nota é verdadera. Mesmo jeito para comprobar as marcas d'agua.</string>
+    <string name="boxhelp">Poe a nota sobre a tela. Tem que estar escuro y podras ver as filgranas que verificar que a nota é verdadera. Mesmo jeito para comprobar as marcas d\'agua.</string>
     <string name="btnboxrate">Qualificar-nos</string>
     <string name="btnboxclose">Fechar</string>
     <string name="boxhelptitle">Ajuda</string>
@@ -28,8 +17,9 @@
     <string name="btnpa">Pesos Argentinos</string>
     <string name="txta">Anverso</string>
     <string name="txtr">Reverso</string>
-	<string name="real_50_watermark">Coloque a nota contra a luz e veja, na área clara, a figura do animal e o número de valor da nota em tons que variam do claro ao escuro</string>
-	<string name="real_50_description">As notas de 50 e 100 reais tem uma faixa holográfica que ao movemento da misma, você ve nessa faixa os seguintes efeitos: A) O número do valor da nota e a palavra REAIS se alternam B) A figura do animal fica colorida. C) Na folha (nota de 50) ou no coral (nota de 100) aparecem diversas cores em movimento. A movimente a nota</string>
-	
+    <string name="real_50_watermark">Coloque a nota contra a luz e veja, na área clara, a figura do animal e o número de valor da nota em tons que variam do claro ao escuro</string>
+    <string name="real_50_description">As notas de 50 e 100 reais tem uma faixa holográfica que ao movemento da misma, você ve nessa faixa os seguintes efeitos: A) O número do valor da nota e a palavra REAIS se alternam B) A figura do animal fica colorida. C) Na folha (nota de 50) ou no coral (nota de 100) aparecem diversas cores em movimento. A movimente a nota</string>
+    <string name="real_100_watermark">Coloque a nota contra a luz e veja, na área clara, a figura do animal e o número de valor da nota em tons que variam do claro ao escuro</string>
+    <string name="real_100_description">As notas de 50 e 100 reais tem uma faixa holográfica que ao movemento da misma, você ve nessa faixa os seguintes efeitos: A) O número do valor da nota e a palavra REAIS se alternam B) A figura do animal fica colorida. C) Na folha (nota de 50) ou no coral (nota de 100) aparecem diversas cores em movimento. A movimente a nota</string>
 
 </resources>

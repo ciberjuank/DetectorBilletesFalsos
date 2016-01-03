@@ -15,12 +15,12 @@ import com.appsimple.detectorbilletesfalsos.beans.CurrencyInfo;
 
 public class JSONUtils {
 
-	private JSONUtils instance;
+	private static JSONUtils instance;
 
 	private JSONUtils() {
 	}
 
-	public JSONUtils getInstance() {
+	public static JSONUtils getInstance() {
 		if (instance != null) {
 			instance = new JSONUtils();
 		}

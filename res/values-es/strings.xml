@@ -29,5 +29,7 @@
     <string name="txtr">Reverso</string>
 	<string name="real_50_watermark">Coloque contra la luz y verifique en el área clara la figura de un animal y el número de valor del billete en tonos que varian de claro ao oscuro</string>
 	<string name="real_50_description">Los billetes de 50 y 100 reais tienen una marca holográfica que al moverse puede ver los siguientes efectos: A) El número de valor del billete y la palabra REAIS se alternan B) La figura del animal se vuelve colorida. C) La hoja (en los billetes de 50) y en el coral (billete de 100) aparecen diversos colores en movimiento</string>
-	
+	<string name="real_100_watermark">Coloque contra la luz y verifique en el área clara la figura de un animal y el número de valor del billete en tonos que varian de claro ao oscuro</string>
+	<string name="real_100_description">Los billetes de 50 y 100 reais tienen una marca holográfica que al moverse puede ver los siguientes efectos: A) El número de valor del billete y la palabra REAIS se alternan B) La figura del animal se vuelve colorida. C) La hoja (en los billetes de 50) y en el coral (billete de 100) aparecen diversos colores en movimiento</string>
+		
 </resources>
