@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DetectorBilletesFalsosNew</string>
-    <string name="hello_world">Hello world!</string>
+   
     <string name="action_settings">Settings</string>
+    <string name="app_name">Counterfeit Money Detector</string>
+    <string name="btngopro">Remove Ads</string>
+    <string name="btnstart">Start UV</string>
+    <string name="btnstart2">Check Watermark</string>
+    <string name="btnhelp">How to use</string>
+    <string name="btnabout">About</string>
+    <string name="btnexit">Exit</string>
+    <string name="btnyes">Yes !</string>
+    <string name="btnno">Sorry but no </string>
+    <string name="boxrate">We would greatly appreciate it if you could Rate Us on the play store</string>
+    <string name="txtpropaganda">Hi there, I´m Rodrigo the developer of this app. i just finished developing a new game would you like to try it ? It´s free !</string>
+    <string name="propagandatitulo">My new Game!</string>
+    <string name="propagandayes">Yeah sure !</string>
+    <string name="propagandano">No, thanks.</string>
+    <string name="boxhelp">Put a bill on the screen and you will se the watermarks and in the case of the uv light some colored marks. Make shure to be in a dark place if using the uv light</string>
+    <string name="btnboxrate">Rate Us</string>
+    <string name="btninfo">More info about counterfeit</string>
+    <string name="btnboxclose">Close</string>
+    <string name="boxhelptitle">Help</string>
+    <string name="boxstarttitle">Attention!</string>
+    <string name="boxabouttitle">About</string>
+    <string name="boxabout">Conterfeit Money Detecotr was designed by Rodrigo Gonzalez Fantino. Did you like this app?</string>
+    <string name="btnnext">Next</string>
+    <string name="btnprevious">Previous</string>
+    <string name="btnpa">Pesos Argentinos</string>
+    <string name="txta">Anverso</string>
+    <string name="txtr">Reverso</string>
+	<string name="real_50_watermark">Put the note near the light and verify in the clearer area an animal and the note value</string>
+	<string name="real_50_description">50 and 100 reais notes have an holographic sash  which has the following effects: A) NOte value number and the "REAIS" word B) The animal changes his colour. C) The leaf (in the 50\'s notes) and the coral (in 100\' notes) reveals differens colours when you move it.</string>
+    <string name="real_100_watermark">Put the note near the light and verify in the clearer area an animal and the note value</string>
+	<string name="real_100_description">50 and 100 reais notes have an holographic sash  which has the following effects: A) NOte value number and the "REAIS" word B) The animal changes his colour. C) The leaf (in the 50\'s notes) and the coral (in 100\' notes) reveals differens colours when you move it.</string>
 
+	
+	<string name="peso_col_10K_watermark">In both sides you can see a disc which turns from green to violet.</string>
+	<string name="peso_col_10K_description">It has a metallic ink which becomes fluorescent green under ultroviolet light. Also you have a security transparent mark where you can read "BRC 10.000" when you see it against the light. Also has touch sensitive printing in the folowing areas: note denomination "Banco de la República" and in the picture</string>	
+	<string name="peso_col_50K_watermark">In both sides you cann see the Jorge Isaacs picture and a fragment from "Maria\'s" novel, when you see the note against the light </string>
+	<string name="peso_col_50K_description">This note has 2 security threads. On the back you can see a dark band. And in the head you will see a thread in five silver segments, when you can see written "50 MIL PESOS COLOMBIA". Also you can read 50 MIL BRC near the down side of the picture. Finally, you should find some touch sensitive printing in some areas </string>
+	
+    
 </resources>

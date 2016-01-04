@@ -22,10 +22,10 @@
     <string name="real_100_watermark">Coloque a nota contra a luz e veja, na área clara, a figura do animal e o número de valor da nota em tons que variam do claro ao escuro</string>
     <string name="real_100_description">As notas de 50 e 100 reais tem uma faixa holográfica que ao movemento da misma, você ve nessa faixa os seguintes efeitos: A) O número do valor da nota e a palavra REAIS se alternam B) A figura do animal fica colorida. C) Na folha (nota de 50) ou no coral (nota de 100) aparecem diversas cores em movimento. A movimente a nota</string>
 
-    <string name="peso_col_10K_watermark">En ambos lados del billete, al ponerlo a trasluz se ve un disco precolombino que cambia de verde a violeta.</string>
-	<string name="peso_col_10K_description">El billete posee una tinta de brillo metálico que se vuelve verde fluo bajo luz ultravioleta. Posee un hilo de seguridad transparente que a trasluz se lee BRC 10.000, e impresión sensible al tacto( en la numeracón del billete tanto numérica como en letras, donde dice Banco de la República y en la imagen)</string>	
-	<string name="peso_col_50K_watermark">En ambos lados del billete, al ponerlo a trasluz se puede observar la imagen del escritor Jorge Isaacs, asi como también un texto que es fragmento de la novela María</string>
-	<string name="peso_col_50K_description">Posee dos hilos de seguridad. En el reverso un hilo opaco que es una banda oscura. En el anverso otro hilo que sobresale en cinco segmentos de color plateado, donde a trasluz se puede ver el texto 50 MIL PESOS COLOMBIA. En el anverso se debe ver el texto 50 MIL BRC frente al retrato en la zona del número inferior de la serie. E impresión con relieve sensible al tacto</string>
+    <string name="peso_col_10K_watermark">Nas duas faces da nota, você poderá ver um disco que ao moverlo muda de verde a violeta.</string>
+	<string name="peso_col_10K_description">A nota posue uma tinta metálica que torna-se verde fluorescente baixo luz ultravioleta. Alem de isso, há un hilo de segurança transparente que a contra luz pode-se ler BRC 10.000. A última medida e impressao sensível ao tato( na numeraçao da nota, onde diz Banco de la República e na imagen)</string>	
+	<string name="peso_col_50K_watermark">Nas duas faces da nota, a contraluz pódese observar a imagem do escritor Jorge Isaacs, é tambêm um texto fragmento da novela María</string>
+	<string name="peso_col_50K_description">Posue dois hilos de segurança. No reverso uno opaco que é una banda escura. No anverso o outro hilo que têm cinco segmentos de cor prateado, que a contraluz pode-se ler 50 MIL PESOS COLOMBIA. Alem de isso, no anverso debe-se ler o texto 50 MIL BRC embaixo do retrato. A impressao é sensível ao tato</string>
     
 	
 </resources>
