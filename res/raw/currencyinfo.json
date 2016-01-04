@@ -60,9 +60,9 @@
 {
 	"country":"Colombia",
 	"currency":"peso colombiano",
-	"denomination":"100000",
-	"watermark":"peso_col_100K_watermark",
-	"description":"peso_col_100k_description"
+	"denomination":"10000",
+	"watermark":"peso_col_10K_watermark",
+	"description":"peso_col_10k_description"
 },
 {
 	"country":"Colombia",

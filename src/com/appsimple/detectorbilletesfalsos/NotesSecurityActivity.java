@@ -18,16 +18,26 @@ public class NotesSecurityActivity extends Activity{
 			updatedItem.setCountry(item.getCountry());
 			updatedItem.setCurrency(item.getCurrency());
 			updatedItem.setDenomination(item.getDenomination());
-			//Verify locale
+			//Verify description & set locale
 			if (CurrencyInfoKey.REAL_50_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.real_50_description)); 
-				updatedItem.setWatermark(getString(R.string.real_50_watermark)); break;
+				updatedItem.setWatermark(getString(R.string.real_50_watermark)); 
 			}
 			else if(CurrencyInfoKey.REAL_100_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.real_100_description)); 
-				updatedItem.setWatermark(getString(R.string.real_100_watermark)); break;
+				updatedItem.setWatermark(getString(R.string.real_100_watermark)); 
 			}
-		}
+			
+			else if (CurrencyInfoKey.PESO_COL_10K_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.peso_col_10K_description)); 
+				updatedItem.setWatermark(getString(R.string.peso_col_10K_watermark)); 
+			}
+			else if (CurrencyInfoKey.PESO_COL_50k_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.peso_col_50K_description)); 
+				updatedItem.setWatermark(getString(R.string.peso_col_50K_watermark)); break;
+			}
+
+		}		
 		
 		return updatedCurrencyList;
 	}
@@ -37,17 +47,5 @@ public class NotesSecurityActivity extends Activity{
 		List<CurrencyInfo> currencies = jsonUtils.parseJson(this, "currencyInfo.json");
 		return updateCurrencyLocale (currencies);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

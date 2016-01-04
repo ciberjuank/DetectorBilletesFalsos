@@ -17,8 +17,8 @@ public enum CurrencyInfoKey {
 	EURO_500_DESCRIPTION("euro_500_description"),
 	EURO_100_WATERMARK("euro_100_watermark"),
 	EURO_100_DESCRIPTION("euro_100_description"),
-	PESO_COL_100K_WATERMARK("peso_col_100K_watermark"),
-	PESO_COL_100K_DESCRIPTION("peso_col_100k_description"),
+	PESO_COL_10K_WATERMARK("peso_col_10K_watermark"),
+	PESO_COL_10K_DESCRIPTION("peso_col_10k_description"),
 	PESO_COL_50K_WATERMARK("peso_col_50K_watermark"),
 	PESO_COL_50k_DESCRIPTION("peso_col_50k_description");
 
