@@ -49,21 +49,19 @@
                 <!-- ZA FOKUS -->
 
          <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
         android:layout_width="fill_parent"
         android:layout_height="51dp"
         android:layout_gravity="bottom"
         android:gravity="bottom" >
 
-        <com.google.ads.AdView
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/admob"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
             ads:adUnitId="a1518e9f6df3dd2"
-            ads:loadAdOnCreate="true"
             android:gravity="bottom" />
 
         <ListView

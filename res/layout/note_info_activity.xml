@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0000FF"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <RelativeLayout        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -13,23 +13,17 @@
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/admob"
-	        xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
             ads:adUnitId="a1518e9f6df3dd2"
             android:gravity="bottom" />
-
-        <ListView
-            android:id="@+id/lv_agent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/admob"
-            android:cacheColorHint="#00000000"
-            android:divider="#3f3f3f"
-            android:focusable="true" >
-        </ListView>
+		  
+        <LinearLayout 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/noteInfoContent"
+            android:orientation="vertical"/>
     </RelativeLayout>
-
 </LinearLayout>

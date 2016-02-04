@@ -28,10 +28,10 @@ public class Splash extends Activity {
 					// do nothing
 				} finally {
 					finish();
-					Intent i = new Intent();
-					i.setClassName("com.appsimple.DetectorBilleteFalso",
-							"com.appsimple.DetectorBilleteFalso.Menu");
-					startActivity(i);
+					Intent mainIntent = new Intent().setClass(
+	                        Splash.this, NewMainActivity.class);
+	                startActivity(mainIntent);
+
 				}
 			}
 		};

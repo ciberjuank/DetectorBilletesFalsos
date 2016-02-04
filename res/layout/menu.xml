@@ -229,7 +229,7 @@
         android:gravity="bottom"
         tools:ignore="MissingPrefix" >
 
-        <com.google.ads.AdView
+        <com.google.android.gms.ads.AdView
             android:id="@+id/admob"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
             ads:adUnitId="a1518e9f6df3dd2"
             ads:loadAdOnCreate="true"
             android:gravity="bottom" >
-        </com.google.ads.AdView>
+        </com.google.android.gms.ads.AdView>
 
         <ListView
             android:id="@+id/lv_agent"

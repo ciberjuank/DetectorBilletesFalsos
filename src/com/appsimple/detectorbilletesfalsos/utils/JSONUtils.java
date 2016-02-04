@@ -21,7 +21,7 @@ public class JSONUtils {
 	}
 
 	public static JSONUtils getInstance() {
-		if (instance != null) {
+		if (instance == null) {
 			instance = new JSONUtils();
 		}
 		return instance;
@@ -48,10 +48,9 @@ public class JSONUtils {
 		JSONObject obj;
 		List<CurrencyInfo> currencyList = new ArrayList<CurrencyInfo>();
 		try {
-			obj = new JSONObject(loadJSONFromAsset(ctx, jsonFile));
-
-			JSONArray m_jArry = obj.getJSONArray(jsonFile);
-
+			String jsonSTR = loadJSONFromAsset(ctx, jsonFile);
+			obj = new JSONObject(jsonSTR);
+			JSONArray m_jArry =  obj.getJSONArray("CurrencyInfo");
 			for (int i = 0; i < m_jArry.length(); i++) {
 				JSONObject jo_inside = m_jArry.getJSONObject(i);
 				CurrencyInfo item = new CurrencyInfo();
@@ -66,7 +65,7 @@ public class JSONUtils {
 			Log.d("JSONUTILS",
 					"Error while trying to parse JSON: " + e.getMessage());
 		}
-		return currencyList;
+		return currencyList; /* anda hasta aca */
 	}
 
 }
