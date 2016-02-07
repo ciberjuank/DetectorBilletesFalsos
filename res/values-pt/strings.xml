@@ -42,6 +42,6 @@
 	<string name="peso_col_50K_watermark">Nas duas faces da nota, a contraluz pódese observar a imagem do escritor Jorge Isaacs, é tambêm um texto fragmento da novela María</string>
 	<string name="peso_col_50K_description">Posue dois hilos de segurança. No reverso uno opaco que é una banda escura. No anverso o outro hilo que têm cinco segmentos de cor prateado, que a contraluz pode-se ler 50 MIL PESOS COLOMBIA. Alem de isso, no anverso debe-se ler o texto 50 MIL BRC embaixo do retrato. A impressao é sensível ao tato</string>
    	<string name="share_text_dialog">Recem utilicé a apk "Detector de notas falsas". Você Quer verificar se as notas bancarias sao certas? Pode descarregar à apk da playstore de android: </string>
-
+	<string name="denomination_generic"> Todos</string>
 	
 </resources>

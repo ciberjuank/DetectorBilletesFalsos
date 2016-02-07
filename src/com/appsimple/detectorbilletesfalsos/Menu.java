@@ -84,7 +84,7 @@ public class Menu extends Activity {
 
 				{
 
-					Intent start = new Intent(Menu.this, MainActivity.class);
+					Intent start = new Intent(Menu.this, InitUVActivity.class);
 
 					start.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					startActivity(start);
@@ -116,7 +116,7 @@ public class Menu extends Activity {
 
 				{
 
-					Intent start = new Intent(Menu.this, SecondActivity.class);
+					Intent start = new Intent(Menu.this, WatermarkActivity.class);
 
 					start.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					startActivity(start);

@@ -40,12 +40,12 @@
          <activity android:name="CountryNoteSelectorActivity" >
         </activity>
         
-        <activity android:name="MainActivity" >
+        <activity android:name="InitUVActivity" >
         </activity>
         <activity android:name="NewMainActivity" >
         </activity>
         
-        <activity android:name="SecondActivity" >
+        <activity android:name="WatermarkActivity" >
         </activity>
         <activity android:name="Menu" >
         </activity>

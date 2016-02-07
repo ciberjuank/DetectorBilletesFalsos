@@ -20,8 +20,10 @@ public enum CurrencyInfoKey {
 	PESO_COL_10K_WATERMARK("peso_col_10K_watermark"),
 	PESO_COL_10K_DESCRIPTION("peso_col_10k_description"),
 	PESO_COL_50K_WATERMARK("peso_col_50K_watermark"),
-	PESO_COL_50k_DESCRIPTION("peso_col_50k_description");
-
+	PESO_COL_50k_DESCRIPTION("peso_col_50k_description"),
+	YUAN_ALL_DEN("yuan_all_description"),
+	PESO_MEX_ALL_DEN("peso_mex_all_description");
+	
 	private String description;
 	
 	private CurrencyInfoKey(String description){

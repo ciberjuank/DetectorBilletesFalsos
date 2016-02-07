@@ -1,8 +1,10 @@
 package com.appsimple.detectorbilletesfalsos.adapter;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -12,18 +14,18 @@ import com.appsimple.detectorbilletesfalsos.R;
 import com.appsimple.detectorbilletesfalsos.enums.SupportedCountry;
 
 public class CountryGridViewAdapter  extends BaseAdapter{
-
 	 private Context mContext;
 	    public String[] options = {SupportedCountry.ARGENTINA.toString(),
-	    		SupportedCountry.BRASIL.toString(),
 	    		SupportedCountry.COLOMBIA.toString(),
-	    		SupportedCountry.EUROPE.toString(),
 	    		SupportedCountry.USA.toString(),
+	    		SupportedCountry.BRASIL.toString(),
+	    		SupportedCountry.EUROPE.toString(),
 	    		SupportedCountry.CHINA.toString()};
 
 	    public Integer[] flags = {R.drawable.argentina_flag, 
-	    		R.drawable.brazil_flag, R.drawable.colombia_flag,
-	    		R.drawable.europe_flag, R.drawable.usa_flag,
+	    		R.drawable.colombia_flag, R.drawable.usa_flag,
+	    		R.drawable.brazil_flag, 
+	    		R.drawable.europe_flag, 
 	    		R.drawable.china_flag};
 
 	    
@@ -50,9 +52,16 @@ public class CountryGridViewAdapter  extends BaseAdapter{
 	    @Override
 	    public View getView(int position, View convertView, ViewGroup parent) {
 	        LinearLayout itemMenu = new LinearLayout(mContext);
-	    	
+	        itemMenu.setOrientation(LinearLayout.VERTICAL);
+	        itemMenu.setGravity(Gravity.CENTER_HORIZONTAL);
 	        TextView textView = new TextView(mContext);
 	        String optionString = options[position];
+			textView.setGravity(Gravity.CENTER);
+	        int textColor = Integer.parseInt("0000CD", 16) + 0xFF000000;
+			textView.setTextSize(25);
+			textView.setTextColor(textColor);
+
+			
 	        textView.setText(optionString);	 
 	        ImageView imgFlag = new ImageView(mContext);
 	        imgFlag.setImageResource(flags[position]);;

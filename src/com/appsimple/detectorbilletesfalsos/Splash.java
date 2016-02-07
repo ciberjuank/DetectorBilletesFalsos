@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Window;
+
 public class Splash extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.splash);
-
 
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -28,9 +30,9 @@ public class Splash extends Activity {
 					// do nothing
 				} finally {
 					finish();
-					Intent mainIntent = new Intent().setClass(
-	                        Splash.this, NewMainActivity.class);
-	                startActivity(mainIntent);
+					Intent mainIntent = new Intent().setClass(Splash.this,
+							NewMainActivity.class);
+					startActivity(mainIntent);
 
 				}
 			}

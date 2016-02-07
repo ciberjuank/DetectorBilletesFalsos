@@ -9,8 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.ContextThemeWrapper;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.appsimple.detectorbilletesfalsos.beans.CurrencyInfo;
@@ -28,51 +30,39 @@ public class NoteInfoActivity extends Activity {
 		  
 	        CardView card = new CardView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardViewStyle), null, 0);
 	        
-	        LinearLayout rightInner = new LinearLayout(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardContent), null, 0);
-	        rightInner.setOrientation(LinearLayout.HORIZONTAL);
-
 	        LinearLayout leftInner = new LinearLayout(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardContent), null, 0);
 	        leftInner.setOrientation(LinearLayout.VERTICAL);
-	        TextView currencyTitle = new TextView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.cardTextStyle));
-	        currencyTitle.setLayoutParams(new LinearLayout.LayoutParams(
-	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT
-	        ));
-
-	        currencyTitle.setBackgroundColor(getResources().getColor(R.color.defaultCardBackground));
-	        currencyTitle.setText(getString (R.string.country) + ": " + country);
-
+	        
 	        TextView countryDescription = new TextView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.cardTextStyle));
-
 	        countryDescription.setLayoutParams(new LinearLayout.LayoutParams(
 	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT
 	        ));
+
 	        countryDescription.setBackgroundColor(getResources().getColor(R.color.defaultCardBackground));
-	        countryDescription.setText(getString (R.string.currency) + ": " + currency);
+	        countryDescription.setText(getString (R.string.country) + ": " + country);
 
-	        TextView watermarkDescription = new TextView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.cardTextStyle));
+	        TextView currencyTextView = new TextView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.cardTextStyle));
 
-	        watermarkDescription.setLayoutParams(new LinearLayout.LayoutParams(
+	        currencyTextView.setLayoutParams(new LinearLayout.LayoutParams(
 	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT
 	        ));
-	        watermarkDescription.setBackgroundColor(getResources().getColor(R.color.defaultCardBackground));
-	        watermarkDescription.setText(getString (R.string.watermark) + ": " + country);
-
-	        
-	        leftInner.addView(currencyTitle);
+	        currencyTextView.setBackgroundColor(getResources().getColor(R.color.defaultCardBackground));
+	        currencyTextView.setText(currency);
+	        	        
 	        leftInner.addView(countryDescription);
-	        leftInner.addView(watermarkDescription);
-	        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-	                LinearLayout.LayoutParams.MATCH_PARENT,
-	                LinearLayout.LayoutParams.MATCH_PARENT
-	        );
-	        card.setLayoutParams(lParams);
-
+	        
 	        ImageView noteImg = new ImageView(ctx);
 	        noteImg.setImageResource(R.drawable.ar_note);
-	        rightInner.addView(noteImg);
-	        rightInner.addView (leftInner);
-	        card.addView(rightInner);
-
+	        leftInner.addView(currencyTextView);
+	        leftInner.addView(noteImg);
+	        
+	        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
+	                LinearLayout.LayoutParams.WRAP_CONTENT,
+	                LinearLayout.LayoutParams.WRAP_CONTENT
+	        );
+	        card.setLayoutParams(lParams);
+	        card.addView(leftInner);
+	        
 	        return card;
 
 	    }
@@ -114,8 +104,8 @@ public class NoteInfoActivity extends Activity {
         cardInner.addView(noteSecurityDescription);
         cardInner.addView(watermarkDescription);
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
         );
         card.setLayoutParams(lParams);
 
@@ -129,6 +119,8 @@ public class NoteInfoActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
 		setContentView(R.layout.note_info_activity);
 		ctx = getApplicationContext();
 		Intent currentIntent = getIntent();
@@ -148,13 +140,19 @@ public class NoteInfoActivity extends Activity {
 	private List<CurrencyInfo> filterCurrencies(List<CurrencyInfo>currencies, SupportedCountry country){
 		List<CurrencyInfo>filtered = new ArrayList<CurrencyInfo>();
 		for (CurrencyInfo current: currencies){
-			if (current.getCountry().equals(country)){
+			if (current.getCountry().equals(country.toString())){
 				filtered.add(current);
 			}
 		}
 		return filtered;
 	}
-	
+	private String getDenomination (String denomination){
+		String result = denomination;
+		if (("").equals(denomination)){
+			result = getString(R.string.denomination_generic);
+		}
+		return result;
+	}
 	
 	private List<CurrencyInfo> updateCurrencyLocale (List<CurrencyInfo> currencies){
 		List<CurrencyInfo> updatedCurrencyList = new ArrayList<CurrencyInfo>();
@@ -162,7 +160,7 @@ public class NoteInfoActivity extends Activity {
 			CurrencyInfo updatedItem = new CurrencyInfo();
 			updatedItem.setCountry(item.getCountry());
 			updatedItem.setCurrency(item.getCurrency());
-			updatedItem.setDenomination(item.getDenomination());
+			updatedItem.setDenomination(getDenomination(item.getDenomination()));
 			//Verify description & set locale
 			if (CurrencyInfoKey.REAL_50_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.real_50_description)); 
@@ -172,25 +170,52 @@ public class NoteInfoActivity extends Activity {
 				updatedItem.setDescription(getString(R.string.real_100_description)); 
 				updatedItem.setWatermark(getString(R.string.real_100_watermark)); 
 			}
-			
+
+			if (CurrencyInfoKey.PESO_AR_100_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.peso_arg_100_description)); 
+				updatedItem.setWatermark(getString(R.string.peso_arg_100_watermark)); 
+			}
+			else if(CurrencyInfoKey.PESO_AR_50_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.peso_arg_50_description)); 
+				updatedItem.setWatermark(getString(R.string.peso_arg_50_watermark)); 
+			}
 			else if (CurrencyInfoKey.PESO_COL_10K_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.peso_col_10K_description)); 
 				updatedItem.setWatermark(getString(R.string.peso_col_10K_watermark)); 
 			}
 			else if (CurrencyInfoKey.PESO_COL_50k_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.peso_col_50K_description)); 
-				updatedItem.setWatermark(getString(R.string.peso_col_50K_watermark)); break;
+				updatedItem.setWatermark(getString(R.string.peso_col_50K_watermark)); 
 			}
+			else if (CurrencyInfoKey.USD_50_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.usd_50_description)); 
+				updatedItem.setWatermark(getString(R.string.usd_50_watermark)); 
+			}				
+			else if (CurrencyInfoKey.USD_100_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.usd_100_description)); 
+				updatedItem.setWatermark(getString(R.string.usd_100_watermark)); 
+			}				
+			else if (CurrencyInfoKey.YUAN_ALL_DEN.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.yuan_all_description)); 
+				updatedItem.setWatermark(getString(R.string.yuan_all_watermark)); 
+			}				
+			
+			else if (CurrencyInfoKey.PESO_MEX_ALL_DEN.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.pmex_all_description)); 
+				updatedItem.setWatermark(getString(R.string.pmex_all_watermark)); 
+			}				
+			
+			
+			
 			updatedCurrencyList.add(updatedItem);
 		}		
 		
 		return updatedCurrencyList;
 	}
-
 	
 	public void setupMainContent (List<CurrencyInfo> notes, Integer country){
 		LinearLayout lContent = (LinearLayout) findViewById(R.id.noteInfoContent);
-		String currency = getString(R.string.Currency) +": " +notes.get(0).getCurrency() + notes.get(0);
+		String currency = getString(R.string.Currency) +": " +notes.get(0).getCurrency();
 		String countryString = SupportedCountry.values()[country].toString();
 		CardView cardHeader = createSingleCard(currency, countryString);
 		lContent.addView(cardHeader);

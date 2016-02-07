@@ -6,16 +6,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import com.appsimple.detectorbilletesfalsos.adapter.MenuGridViewAdapter;
 import com.google.android.gms.ads.AdRequest;
@@ -27,8 +25,8 @@ public class NewMainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.new_mainactivity);
-
 		AdRequest adRequest = new AdRequest.Builder().build();
 		AdView adView = (AdView) this.findViewById(R.id.admob);
 		adView.loadAd(adRequest);
@@ -48,13 +46,13 @@ public class NewMainActivity extends Activity {
 	}
 
 	private void callInitUv() {
-		Intent start = new Intent(NewMainActivity.this, MainActivity.class);
+		Intent start = new Intent(NewMainActivity.this, InitUVActivity.class);
 		start.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(start);
 	}
 
 	private void callWatermark() {
-		Intent start = new Intent(NewMainActivity.this, SecondActivity.class);
+		Intent start = new Intent(NewMainActivity.this, WatermarkActivity.class);
 		start.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(start);
 	}
@@ -68,7 +66,7 @@ public class NewMainActivity extends Activity {
 
 		Intent browserIntent = new Intent(
 				Intent.ACTION_VIEW,
-				Uri.parse("https://play.google.com/store/apps/details?id=com.appsimple.DetectorBilleteFalsoPaid"));
+				Uri.parse("market://details?id=com.appsimple.DetectorBilleteFalsoPaid"));
 
 		startActivity(browserIntent);
 

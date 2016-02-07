@@ -69,5 +69,19 @@
 	"denomination":"50000",
 	"watermark":"peso_col_50K_watermark",
 	"description":"peso_col_50k_description"
+},
+{
+	"country":"Mexico",
+	"currency":"peso mexicano",
+	"denomination":"",
+	"watermark":"pmex_all_watermark",
+	"description":"pmex_all_description"
+},
+{
+	"country":"China",
+	"currency":"yuan",
+	"denomination":"",
+	"watermark":"yuan_all_watermark",
+	"description":"yuan_all_description"
 }]
 }

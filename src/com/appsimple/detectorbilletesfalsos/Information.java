@@ -114,7 +114,7 @@ public class Information extends Activity {
 
 				{
 
-					Intent start = new Intent(Information.this, SecondActivity.class);
+					Intent start = new Intent(Information.this, WatermarkActivity.class);
 
 					start.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					startActivity(start);
