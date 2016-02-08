@@ -8,11 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.text.Html;
 import android.view.ContextThemeWrapper;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.appsimple.detectorbilletesfalsos.beans.CurrencyInfo;
@@ -20,14 +20,26 @@ import com.appsimple.detectorbilletesfalsos.enums.CurrencyInfoKey;
 import com.appsimple.detectorbilletesfalsos.enums.IntentParam;
 import com.appsimple.detectorbilletesfalsos.enums.SupportedCountry;
 import com.appsimple.detectorbilletesfalsos.utils.JSONUtils;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class NoteInfoActivity extends Activity {
 	
 	private Context ctx;
 	
+	private String getNoteId(String country, String denomination){		
+		String noteId ;
+		String updatedDenomination = denomination;
+		if (denomination.equals(getString(R.string.denomination_generic))){
+			updatedDenomination = "all";
+		}
+		noteId = country.toLowerCase(ctx.getResources().getConfiguration().locale) + "_" + "note_" + updatedDenomination;
+		return noteId;
+	}
    
-	  private CardView createSingleCard(String currency, String country) {
-		  
+	private CardView createHeaderSingleCard(String mCurrency, String country) {
+		  	
+			String currency = Html.fromHtml("<b>" + getString(R.string.Currency).toString() + "</b>") +": " + mCurrency;
 	        CardView card = new CardView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardViewStyle), null, 0);
 	        
 	        LinearLayout leftInner = new LinearLayout(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardContent), null, 0);
@@ -35,29 +47,27 @@ public class NoteInfoActivity extends Activity {
 	        
 	        TextView countryDescription = new TextView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.cardTextStyle));
 	        countryDescription.setLayoutParams(new LinearLayout.LayoutParams(
-	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT
+	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
 	        ));
 
 	        countryDescription.setBackgroundColor(getResources().getColor(R.color.defaultCardBackground));
-	        countryDescription.setText(getString (R.string.country) + ": " + country);
+	        countryDescription.setText(getText (R.string.country) + ": " + country);
 
 	        TextView currencyTextView = new TextView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.cardTextStyle));
 
 	        currencyTextView.setLayoutParams(new LinearLayout.LayoutParams(
-	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT
+	                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
 	        ));
 	        currencyTextView.setBackgroundColor(getResources().getColor(R.color.defaultCardBackground));
 	        currencyTextView.setText(currency);
 	        	        
 	        leftInner.addView(countryDescription);
 	        
-	        ImageView noteImg = new ImageView(ctx);
-	        noteImg.setImageResource(R.drawable.ar_note);
 	        leftInner.addView(currencyTextView);
-	        leftInner.addView(noteImg);
+	        
 	        
 	        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-	                LinearLayout.LayoutParams.WRAP_CONTENT,
+	                LinearLayout.LayoutParams.MATCH_PARENT,
 	                LinearLayout.LayoutParams.WRAP_CONTENT
 	        );
 	        card.setLayoutParams(lParams);
@@ -69,8 +79,9 @@ public class NoteInfoActivity extends Activity {
 	  
 
 	
-    private CardView createSingleCard(String header, String description1, String description2) {
+    private CardView createSingleCard(String description1, String description2, String country, String denomination) {
 
+    	String header = getString(R.string.Denomination) + ":" + denomination;
         CardView card = new CardView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardViewStyle), null, 0);
 
         LinearLayout cardInner = new LinearLayout(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardContent), null, 0);
@@ -101,6 +112,13 @@ public class NoteInfoActivity extends Activity {
 
         
         cardInner.addView(txtTitle);
+        ImageView noteImg = new ImageView(ctx);
+        
+        String noteName = getNoteId (country, denomination);
+        Integer noteImageResourceId = getResources().getIdentifier(noteName, "drawable", getPackageName());
+        
+        noteImg.setImageResource(noteImageResourceId );
+        cardInner.addView(noteImg);
         cardInner.addView(noteSecurityDescription);
         cardInner.addView(watermarkDescription);
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
@@ -126,6 +144,13 @@ public class NoteInfoActivity extends Activity {
 		Intent currentIntent = getIntent();
 		int country = currentIntent.getIntExtra(IntentParam.COUNTRY.toString(), 0);
 		List<CurrencyInfo> notes = loadNoteInfo(country);
+		
+		AdRequest adRequest = new AdRequest.Builder().build();
+		AdView adView = (AdView) this.findViewById(R.id.admob);
+		adView.bringToFront();
+		adView.loadAd(adRequest);
+
+		
 		setupMainContent(notes, country);
 	}
 	
@@ -171,7 +196,7 @@ public class NoteInfoActivity extends Activity {
 				updatedItem.setWatermark(getString(R.string.real_100_watermark)); 
 			}
 
-			if (CurrencyInfoKey.PESO_AR_100_DESCRIPTION.toString().equals(item.getDescription())){
+			else if (CurrencyInfoKey.PESO_AR_100_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.peso_arg_100_description)); 
 				updatedItem.setWatermark(getString(R.string.peso_arg_100_watermark)); 
 			}
@@ -215,13 +240,16 @@ public class NoteInfoActivity extends Activity {
 	
 	public void setupMainContent (List<CurrencyInfo> notes, Integer country){
 		LinearLayout lContent = (LinearLayout) findViewById(R.id.noteInfoContent);
-		String currency = getString(R.string.Currency) +": " +notes.get(0).getCurrency();
+		String currency = notes.get(0).getCurrency(); 
 		String countryString = SupportedCountry.values()[country].toString();
-		CardView cardHeader = createSingleCard(currency, countryString);
+		
+		String denomination = notes.get(0).getDenomination();
+		
+		CardView cardHeader = createHeaderSingleCard(currency, countryString);
 		lContent.addView(cardHeader);
 		for (CurrencyInfo note : notes){
-			String denomination = getString(R.string.Denomination) + ":" + note.getDenomination();
-			CardView cardItem = createSingleCard(denomination, note.getDescription(), note.getWatermark());
+			denomination = note.getDenomination();
+			CardView cardItem = createSingleCard(note.getDescription(), note.getWatermark(), countryString, denomination);
 			lContent.addView(cardItem);
 		}
 	}

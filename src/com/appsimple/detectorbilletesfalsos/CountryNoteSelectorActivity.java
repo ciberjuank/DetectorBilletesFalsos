@@ -27,7 +27,8 @@ public class CountryNoteSelectorActivity extends Activity {
 		AdRequest adRequest = new AdRequest.Builder().build();
 		AdView adView = (AdView) this.findViewById(R.id.admob);
 		adView.loadAd(adRequest);
-
+		adView.bringToFront();
+		
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		WindowManager.LayoutParams layout = getWindow().getAttributes();
 

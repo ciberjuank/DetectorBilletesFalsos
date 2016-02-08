@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,13 +19,15 @@ public class CountryGridViewAdapter  extends BaseAdapter{
 	    		SupportedCountry.USA.toString(),
 	    		SupportedCountry.BRASIL.toString(),
 	    		SupportedCountry.EUROPE.toString(),
-	    		SupportedCountry.CHINA.toString()};
+	    		SupportedCountry.CHINA.toString(),
+	    		SupportedCountry.MEXICO.toString()};
 
 	    public Integer[] flags = {R.drawable.argentina_flag, 
 	    		R.drawable.colombia_flag, R.drawable.usa_flag,
 	    		R.drawable.brazil_flag, 
 	    		R.drawable.europe_flag, 
-	    		R.drawable.china_flag};
+	    		R.drawable.china_flag,
+	    		R.drawable.mexico_flag};
 
 	    
 	    // Constructor

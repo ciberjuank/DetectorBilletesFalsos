@@ -27,10 +27,10 @@
     <string name="btnpa">Pesos Argentinos</string>
     <string name="txta">Anverso</string>
     <string name="txtr">Reverso</string>
-    <string name="securityMeasures">Medidas de seguridad</string>
-    <string name="watermark">Marcas de agua</string>
-    <string name="currency">Moneda</string>
-    <string name="country">País</string>
+    <string name="securityMeasures"><b>Medidas de seguridad</b></string>
+    <string name="watermark"><b>Marcas de agua</b></string>
+    <string name="currency"><b>Moneda</b></string>
+    <string name="country"><b>País</b></string>
     
     <string name="menuInitUV">Iniciar UV</string>
     <string name="menucheckWatermark">Marcas de Agua</string>

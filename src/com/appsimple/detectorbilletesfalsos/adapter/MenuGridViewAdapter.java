@@ -1,6 +1,7 @@
 package com.appsimple.detectorbilletesfalsos.adapter;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +18,10 @@ public class MenuGridViewAdapter extends BaseAdapter {
 	private Context mContext;
 	public int[] options = { R.string.menuInitUV, R.string.menucheckWatermark,
 			R.string.menuNoteSpec, R.string.menuRemoveAdds, R.string.menuHelp,
-			R.string.menuCredits, R.string.menuShare };
+			R.string.menuShare };
 
 	public int[] backgroundColors = { R.color.lightViolet, R.color.darkGreen,
-			R.color.lightYellow, R.color.darkViolet, R.color.lightGreen,
+			R.color.lightYellow, R.color.lightGreen,
 			R.color.darkBlue, R.color.darkPink };
 
 	// Constructor
@@ -49,9 +50,12 @@ public class MenuGridViewAdapter extends BaseAdapter {
 		LinearLayout item = new LinearLayout(mContext);
 		
 		int height = (int) (mContext.getResources().getDimension(R.dimen.option_menu_height) / mContext.getResources().getDisplayMetrics().density);
-		int width = (int) (mContext.getResources().getDimension(R.dimen.option_menu_width) / mContext.getResources().getDisplayMetrics().density);
+		//int width = (int) (mContext.getResources().getDimension(R.dimen.option_menu_width) / mContext.getResources().getDisplayMetrics().density);
 		
-		AbsListView.LayoutParams lp= new AbsListView.LayoutParams(width, height);
+		DisplayMetrics displayMetrics=mContext.getResources().getDisplayMetrics();
+		int screenWidthInDp= Double.valueOf(displayMetrics.widthPixels * 0.46).intValue();
+		
+		AbsListView.LayoutParams lp= new AbsListView.LayoutParams(screenWidthInDp, height);
 		item.setGravity(Gravity.CENTER);
 		item.setOrientation(LinearLayout.VERTICAL);
 		item.setBackgroundResource(backgroundColors[position]);

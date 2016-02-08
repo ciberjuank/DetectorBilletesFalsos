@@ -6,7 +6,8 @@ public enum SupportedCountry {
 	USA ("USA"),
 	BRASIL("Brasil"),
 	EUROPE ("Europe"),
-	CHINA ("China");
+	CHINA ("China"),
+	MEXICO("Mexico");
 	
 	private String description;
 	

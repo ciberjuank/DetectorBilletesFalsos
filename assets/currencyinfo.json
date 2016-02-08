@@ -29,21 +29,21 @@
 	"description":"real_50_description"
 },
 {
-	"country":"EEUU",
+	"country":"USA",
 	"currency":"usd",
 	"denomination":"100",
 	"watermark":"usd_100_watermark",
 	"description":"usd_100_description"
 },
 {
-	"country":"EEUU",
+	"country":"USA",
 	"currency":"usd",
 	"denomination":"50",
 	"watermark":"usd_50_watermark",
 	"description":"usd_50_description"
 },
 {
-	"country":"EUROPE",
+	"country":"Europe",
 	"currency":"euro",
 	"denomination":"500",
 	"watermark":"euro_500_watermark",

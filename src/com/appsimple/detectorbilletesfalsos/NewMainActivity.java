@@ -29,6 +29,7 @@ public class NewMainActivity extends Activity {
 		setContentView(R.layout.new_mainactivity);
 		AdRequest adRequest = new AdRequest.Builder().build();
 		AdView adView = (AdView) this.findViewById(R.id.admob);
+		adView.bringToFront();
 		adView.loadAd(adRequest);
 
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -101,30 +102,6 @@ public class NewMainActivity extends Activity {
 		alertbox.show();
 	}
 
-	private void callCredits() {
-		AlertDialog.Builder alertbox = new AlertDialog.Builder(
-				NewMainActivity.this);
-		alertbox.setTitle(R.string.boxabouttitle);
-		// alertbox.setIcon(R.drawable.icon);
-		alertbox.setCancelable(false);
-		alertbox.setMessage(R.string.boxabout);
-
-		alertbox.setPositiveButton(R.string.btnno,
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-					}
-				});
-		alertbox.setNegativeButton(R.string.btnyes,
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-
-						rateUs();
-
-					}
-				});
-		alertbox.show();
-	}
-
 	private void callShare() {
 		Intent intent = new Intent();
 		intent.setAction(Intent.ACTION_SEND);
@@ -176,9 +153,6 @@ public class NewMainActivity extends Activity {
 					break;
 				case 4:
 					callHelp();
-					break;
-				case 5:
-					callCredits();
 					break;
 				case 6:
 					callShare();
