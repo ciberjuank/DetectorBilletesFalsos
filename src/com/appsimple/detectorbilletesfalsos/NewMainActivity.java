@@ -154,7 +154,7 @@ public class NewMainActivity extends Activity {
 				case 4:
 					callHelp();
 					break;
-				case 6:
+				case 5:
 					callShare();
 					break;
 
