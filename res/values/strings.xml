@@ -53,7 +53,7 @@
 	<string name="peso_col_50K_watermark">In both sides you cann see the Jorge Isaacs picture and a fragment from "Maria\'s" novel, when you see the note against the light </string>
 	<string name="peso_col_50K_description">This note has 2 security threads. On the back you can see a dark band. And in the head you will see a thread in five silver segments, when you can see written "50 MIL PESOS COLOMBIA". Also you can read 50 MIL BRC near the down side of the picture. Finally, you should find some touch sensitive printing in some areas </string>
 	
-	<string name="share_text_dialog">I have just the Money Detector. Do you want to verify your notes? You can download this amazing app from the android playstore: </string>
+	<string name="share_text_dialog">I have just the Money Detector. Do you want to verify your notes? </string>
 	<string name="andrioid_playstore_url">https://play.google.com/store/apps/details?id=com.appsimple.DetectorBilleteFalso2</string>
     
 	

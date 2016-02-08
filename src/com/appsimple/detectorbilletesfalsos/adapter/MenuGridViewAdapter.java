@@ -20,7 +20,7 @@ public class MenuGridViewAdapter extends BaseAdapter {
 			R.string.menuNoteSpec, R.string.menuRemoveAdds, R.string.menuHelp,
 			R.string.menuShare };
 
-	public int[] backgroundColors = { R.color.lightViolet, R.color.darkGreen,
+	public int[] backgroundColors = {R.color.darkGreen, R.color.lightViolet,
 			R.color.lightYellow, R.color.lightGreen,
 			R.color.darkBlue, R.color.darkPink };
 
