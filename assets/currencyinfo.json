@@ -45,16 +45,9 @@
 {
 	"country":"Europe",
 	"currency":"euro",
-	"denomination":"500",
-	"watermark":"euro_500_watermark",
-	"description":"euro_500_watermark"
-},
-{
-	"country":"Europe",
-	"currency":"euro",
-	"denomination":"100",
-	"watermark":"euro_100_watermark",
-	"description":"euro_100_description"
+	"denomination":"",
+	"watermark":"eur_all_watermark",
+	"description":"eur_all_description"
 },
 {
 	"country":"Colombia",

@@ -39,7 +39,7 @@ public class NoteInfoActivity extends Activity {
    
 	private CardView createHeaderSingleCard(String mCurrency, String country) {
 		  	
-			String currency = Html.fromHtml("<b>" + getString(R.string.Currency).toString() + "</b>") +": " + mCurrency;
+			String currency = getText(R.string.Currency) +": " + mCurrency;
 	        CardView card = new CardView(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardViewStyle), null, 0);
 	        
 	        LinearLayout leftInner = new LinearLayout(new ContextThemeWrapper(NoteInfoActivity.this, R.style.CardContent), null, 0);
@@ -225,12 +225,14 @@ public class NoteInfoActivity extends Activity {
 				updatedItem.setWatermark(getString(R.string.yuan_all_watermark)); 
 			}				
 			
-			else if (CurrencyInfoKey.PESO_MEX_ALL_DEN.toString().equals(item.getDescription())){
+			else if (CurrencyInfoKey.PESO_MEX_ALL_DESCRIPTION.toString().equals(item.getDescription())){
 				updatedItem.setDescription(getString(R.string.pmex_all_description)); 
 				updatedItem.setWatermark(getString(R.string.pmex_all_watermark)); 
 			}				
-			
-			
+			else if (CurrencyInfoKey.EURO_ALL_DESCRIPTION.toString().equals(item.getDescription())){
+				updatedItem.setDescription(getString(R.string.eur_all_description)); 
+				updatedItem.setWatermark(getString(R.string.eur_all_watermark)); 
+			}				
 			
 			updatedCurrencyList.add(updatedItem);
 		}		
