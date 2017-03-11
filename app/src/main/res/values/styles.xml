@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+
+
+    <style name="CardViewStyle" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">100px</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@color/defaultCardBackground</item>
+        <item name="android:layout_marginTop">80px</item>
+    </style>
+
+    <style name="CardContent" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">12px</item>
+        <item name="android:paddingRight">12px</item>
+        <item name="android:paddingTop">18px</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:paddingBottom">18px</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="cardTextStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="homeBarLayoutStyle">
+        <item name="android:background">@color/defaultCardBackground</item>
+    </style>
+</resources>

@@ -1,0 +1,88 @@
+{
+  "CurrencyInfo": [
+    {
+      "country": "Argentina",
+      "currency": "peso argentino",
+      "denomination": "100",
+      "watermark": "peso_ar_100_watermark",
+      "description": "peso_ar_100_description"
+    },
+    {
+      "country": "Argentina",
+      "currency": "peso argentino",
+      "denomination": "50",
+      "watermark": "peso_ar_50_watermark",
+      "description": "peso_ar_50_description"
+    },
+    {
+      "country": "Brasil",
+      "currency": "real",
+      "denomination": "100",
+      "watermark": "real_100_watermark",
+      "description": "real_100_description"
+    },
+    {
+      "country": "Brasil",
+      "currency": "real",
+      "denomination": "50",
+      "watermark": "real_50_watermark",
+      "description": "real_50_description"
+    },
+    {
+      "country": "USA",
+      "currency": "usd",
+      "denomination": "100",
+      "watermark": "usd_100_watermark",
+      "description": "usd_100_description"
+    },
+    {
+      "country": "USA",
+      "currency": "usd",
+      "denomination": "50",
+      "watermark": "usd_50_watermark",
+      "description": "usd_50_description"
+    },
+    {
+      "country": "Europe",
+      "currency": "euro",
+      "denomination": "500",
+      "watermark": "eur_all_watermark",
+      "description": "eur_all_description"
+    },
+    {
+      "country": "Europe",
+      "currency": "euro",
+      "denomination": "100",
+      "watermark": "eur_all_watermark",
+      "description": "eur_all_description"
+    },
+    {
+      "country": "Colombia",
+      "currency": "peso colombiano",
+      "denomination": "10000",
+      "watermark": "peso_col_10K_watermark",
+      "description": "peso_col_10k_description"
+    },
+    {
+      "country": "Colombia",
+      "currency": "peso colombiano",
+      "denomination": "50000",
+      "watermark": "peso_col_50K_watermark",
+      "description": "peso_col_50k_description"
+    },
+    {
+      "country": "China",
+      "currency": "yuan",
+      "denomination": "All",
+      "watermark": "yuan_all_watermark",
+      "description": "yuan_all_description"
+    },
+    {
+      "country": "Mexico",
+      "currency": "peso mexicano",
+      "denomination": "All",
+      "watermark": "pmex_all_watermark",
+      "description": "pmex_all_description"
+    }
+  ]
+}

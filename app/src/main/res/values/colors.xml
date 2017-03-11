@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="defaultCardBackground">#D9ECF5</color>
+    <color name="lightViolet">#D117F6</color>
+    <color name="darkViolet">#C38CCE</color>
+    <color name="lightGreen">#BEF594</color>
+    <color name="darkGreen">#06E934</color>
+    <color name="lightYellow">#FCF885</color>
+    <color name="dirtyWhite">#FAFAEA</color>
+    <color name="darkPink">#FF1493</color>
+    <color name="darkBlue">#161F98</color>
+    <color name="regularWhite">#FEFEEE</color>
+    <color name="trasparent">#00FFFFFF</color>
+</resources>
