@@ -7,8 +7,8 @@ android {
         applicationId "com.appsimple.DetectorBilleteFalso2"
         minSdkVersion 13
         targetSdkVersion 24
-        versionCode 82
-        versionName "1.0"
+        versionCode 83
+        versionName "2.1.14"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

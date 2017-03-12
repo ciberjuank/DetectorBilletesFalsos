@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionName="2.1.2"
-    android:versionCode="81"
+    android:versionName="2.1.4"
+    android:versionCode="84"
     package="com.appsimple.DetectorBilleteFalso2">
 
     <uses-sdk
@@ -21,15 +21,15 @@
         android:theme="@style/AppTheme"
         android:allowBackup= "true">
 
-        <activity android:name="com.appsimple.com.appsimple.DetectorBilleteFalso2.NoteInfoActivity" >
+        <activity android:name="com.appsimple.DetectorBilleteFalso2.NoteInfoActivity" >
         </activity>
-        <activity android:name="com.appsimple.com.appsimple.DetectorBilleteFalso2.CountryNoteSelectorActivity" >
-        </activity>
-
-        <activity android:name="com.appsimple.com.appsimple.DetectorBilleteFalso2.InitUVActivity" >
+        <activity android:name="com.appsimple.DetectorBilleteFalso2.CountryNoteSelectorActivity" >
         </activity>
 
-        <activity android:name="com.appsimple.com.appsimple.DetectorBilleteFalso2.NewMainActivity" >
+        <activity android:name="com.appsimple.DetectorBilleteFalso2.InitUVActivity" >
+        </activity>
+
+        <activity android:name="com.appsimple.DetectorBilleteFalso2.NewMainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.appsimple.com.appsimple.DetectorBilleteFalso2.WatermarkActivity" >
+        <activity android:name="com.appsimple.DetectorBilleteFalso2.WatermarkActivity" >
         </activity>
     </application>
 
